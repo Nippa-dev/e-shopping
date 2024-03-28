@@ -1,0 +1,49 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>GreenSupermarket</groupId>
+  <artifactId>Green-Supermarket</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>war</packaging>
+  <dependencies>
+    <!-- Other dependencies -->
+
+    <!-- Servlet API -->
+    <dependency>
+    <groupId>com.sun.mail</groupId>
+    <artifactId>javax.mail</artifactId>
+    <version>1.6.2</version> <!-- Use the latest version available -->
+</dependency>
+
+    <dependency>
+        <groupId>jakarta.servlet</groupId>
+        <artifactId>jakarta.servlet-api</artifactId>
+        <version>4.0.4</version> <!-- Use the latest version available -->
+        <scope>provided</scope>
+    </dependency>
+     <dependency>
+        <groupId>mysql</groupId>
+        <artifactId>mysql-connector-java</artifactId>
+        <version>8.0.23</version> <!-- Use the latest version available -->
+    </dependency>
+</dependencies>
+
+  <build>
+	  <sourceDirectory>src</sourceDirectory>
+	  <plugins>
+		  <plugin>
+			  <artifactId>maven-compiler-plugin</artifactId>
+			  <version>3.8.1</version>
+			  <configuration>
+				  <release>14</release>
+			  </configuration>
+		  </plugin>
+		  <plugin>
+			  <artifactId>maven-war-plugin</artifactId>
+			  <version>3.2.3</version>
+			  <configuration>
+				  <warSourceDirectory>WebContent</warSourceDirectory>
+			  </configuration>
+		  </plugin>
+	  </plugins>
+  </build>
+</project>
